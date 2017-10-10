@@ -14,14 +14,11 @@ public:
     virtual bool init();
     CREATE_FUNC(HelloWorld);
 
-	void doChangeScene(Ref* pSender);
+	void myTick(float f);
+	void SpriteProgressToRadial(float f);
 
-	virtual void onEnter();
-	virtual void onEnterTransitionDidFinish();
-	virtual void onExitTransitionDidStart();
-	virtual void onExit();
-	~HelloWorld(void);
-
+	int nNum;
+	cocos2d::ProgressTimer *pt;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

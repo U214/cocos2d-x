@@ -14,14 +14,13 @@ public:
     virtual bool init();
     CREATE_FUNC(HelloWorld);
 
-	void doChangeScene(Ref* pSender);
+	cocos2d::Sprite* sprite1;
+	cocos2d::Sprite* sprite2;
+	cocos2d::Sprite* sprite3;
 
 	virtual void onEnter();
-	virtual void onEnterTransitionDidFinish();
-	virtual void onExitTransitionDidStart();
 	virtual void onExit();
-	~HelloWorld(void);
-
+	void reZorder(cocos2d::Sprite* pSender);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

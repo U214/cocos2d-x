@@ -14,14 +14,20 @@ public:
     virtual bool init();
     CREATE_FUNC(HelloWorld);
 
-	void doChangeScene(Ref* pSender);
-
 	virtual void onEnter();
-	virtual void onEnterTransitionDidFinish();
-	virtual void onExitTransitionDidStart();
 	virtual void onExit();
-	~HelloWorld(void);
 
+	void onTouchesBegan(const std::vector<cocos2d::Touch*> touches, cocos2d::Event* event);
+	void onTouchesMoved(const std::vector<cocos2d::Touch*> touches, cocos2d::Event* event);
+	void onTouchesEnded(const std::vector<cocos2d::Touch*> touches, cocos2d::Event* event);
+
+	cocos2d::Sprite* pMan;
+	cocos2d::LabelTTF* pLabel1;
+	cocos2d::LabelTTF* pLabel2;
+
+	bool bSelect;
+	int i;
+	float gRotation;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

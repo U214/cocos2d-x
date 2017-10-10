@@ -6,6 +6,7 @@
 #endif
 
 #include "cocos2d.h"
+#include "Monster.h"
 
 class HelloWorld : public cocos2d::Scene
 {
@@ -14,14 +15,9 @@ public:
     virtual bool init();
     CREATE_FUNC(HelloWorld);
 
-	void doChangeScene(Ref* pSender);
-
-	virtual void onEnter();
-	virtual void onEnterTransitionDidFinish();
-	virtual void onExitTransitionDidStart();
-	virtual void onExit();
-	~HelloWorld(void);
-
+	Monster* sprite1;
+	Monster* sprite2;
+	Monster* sprite3;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

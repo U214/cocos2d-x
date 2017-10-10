@@ -14,14 +14,15 @@ public:
     virtual bool init();
     CREATE_FUNC(HelloWorld);
 
-	void doChangeScene(Ref* pSender);
+	cocos2d::Sprite* pWoman1;
+	cocos2d::Sprite* pWoman2;
 
-	virtual void onEnter();
-	virtual void onEnterTransitionDidFinish();
-	virtual void onExitTransitionDidStart();
-	virtual void onExit();
-	~HelloWorld(void);
-
+	void SpriteProgressToRadial();
+	void SpriteProgressToHorizontal();
+	void SpriteProgressToVertical();
+	void SpriteProgressToRadialMidpointChanged();
+	void SpriteProgressBarVarious();
+	void SpriteProgressBarTintAndFade();
 };
 
 #endif // __HELLOWORLD_SCENE_H__
