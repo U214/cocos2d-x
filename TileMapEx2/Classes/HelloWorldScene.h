@@ -14,10 +14,12 @@ public:
     virtual bool init();
     CREATE_FUNC(HelloWorld);
 
-	cocos2d::Sprite* dragon;
-
-	void createBackground();
 	void createDragon();
+
+	cocos2d::Size			winSize;
+	cocos2d::Vec2			dragonPosition;
+	cocos2d::Sprite*		dragon;
+	cocos2d::TMXTiledMap*	tmap;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

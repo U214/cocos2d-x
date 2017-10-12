@@ -1,4 +1,4 @@
-ï»¿#include "HelloWorldScene.h"
+#include "HelloWorldScene.h"
 
 USING_NS_CC;
 
@@ -16,29 +16,29 @@ bool HelloWorld::init()
 
 	/////////////////////////////////
 
-	this->creatBackground();
+	this->createBackground();
 
 	this->createDragon();
 
 	return true;
 }
 
-void HelloWorld::creatBackground() {
-	// ë°°ê²½ ë ˆì´ì–´1
+void HelloWorld::createBackground() {
+	// ¹è°æ ·¹ÀÌ¾î1
 	auto background1 = Sprite::create("Images/background1.png");
 	background1->setAnchorPoint(Vec2(0, 0));
 	background1->setPosition(Vec2(0, 0));
 
-	// ë°°ê²½ ë ˆì´ì–´1
+	// ¹è°æ ·¹ÀÌ¾î1
 	auto background2 = Sprite::create("Images/background2.png");
 	background2->setAnchorPoint(Vec2(0, 0));
 	background2->setPosition(Vec2(512, 0));
 
-	// ë°°ê²½ ìŠ¤í”„ë¼ì´íŠ¸ë¥¼ ë‹´ì„ ë¶€ëª¨ë¡œ ë ˆì´ì–´ë¥¼ ë§Œë“ ë‹¤.
+	// ¹è°æ ½ºÇÁ¶óÀÌÆ®¸¦ ´ãÀ» ºÎ¸ð·Î ·¹ÀÌ¾î¸¦ ¸¸µç´Ù.
 	auto voidNode = Layer::create();
 
-	// ë°°ê²½ ìŠ¤í”„ë¼ì´íŠ¸ë¥¼ ë ˆì´ì–´ì— ë„£ëŠ”ë‹¤
-	// ë°°ê²½ì´ë¯¸ì§€ì˜ ì‚¬ì´ì¦ˆ : 512 x 320
+	// ¹è°æ ½ºÇÁ¶óÀÌÆ®¸¦ ·¹ÀÌ¾î¿¡ ³Ö´Â´Ù
+	// ¹è°æÀÌ¹ÌÁöÀÇ »çÀÌÁî : 512 x 320
 	voidNode->addChild(background1);
 	voidNode->addChild(background2);
 
@@ -52,7 +52,7 @@ void HelloWorld::createDragon() {
 		->addImage("Images/dragon_animation.png");
 
 	auto animation = Animation::create();
-	animation->setDelayPerUnit(0.f);
+	animation->setDelayPerUnit(0.1f);
 
 	for (int i = 0; i < 6; i++) {
 		int index = i % 4;

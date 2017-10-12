@@ -14,10 +14,12 @@ public:
     virtual bool init();
     CREATE_FUNC(HelloWorld);
 
-	cocos2d::Sprite* dragon;
+	cocos2d::EventListenerTouchOneByOne* listener;
 
-	void createBackground();
-	void createDragon();
+	void onEnter();
+	void onExit();
+	bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
+	void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
 };
 
 #endif // __HELLOWORLD_SCENE_H__
