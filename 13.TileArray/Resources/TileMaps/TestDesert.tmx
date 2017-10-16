@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="32" tileheight="32" nextobjectid="16">
+ <tileset firstgid="1" source="TestDesert.tsx"/>
+ <tileset firstgid="49" source="Meta.tsx"/>
+ <layer name="Background" width="20" height="10">
+  <data encoding="base64" compression="zlib">
+   eJylztkKgCAQQFEraCFohVYIIyiq//+/RphAZMypHg7uF3shxKAZwfTDbKwXHCUDt7capGWP6u3gwLkaT7wfgogQO3o2GcgJxYfe5ui9+ZfEXgNaQofnHvA16m3w0HNJiLeppffkvsftcZWgMtTgAhSlFcc=
+  </data>
+ </layer>
+ <objectgroup name="Objects">
+  <object id="4" name="SpawnPoint" x="80" y="176"/>
+ </objectgroup>
+ <layer name="Items" width="20" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYKA+kKeBmYMZ6A20A3CAweouagF6pDMA9bAAmw==
+  </data>
+ </layer>
+ <layer name="MetaInfo" width="20" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYKA+MKKBmYMZGA60A3CAweouagF6pDMAO68Axw==
+  </data>
+ </layer>
+</map>
