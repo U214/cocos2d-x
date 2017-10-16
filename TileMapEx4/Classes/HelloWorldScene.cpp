@@ -77,7 +77,7 @@ void HelloWorld::createDragon() {
 	}
 
 	dragon = Sprite::createWithTexture(texture, Rect(0, 0, 130, 140));
-	dragon->setPosition(Vec2(240, 160));
+	dragon->setPosition(dragonPosition);
 	this->addChild(dragon);
 
 	dragon->setFlippedX(true);
