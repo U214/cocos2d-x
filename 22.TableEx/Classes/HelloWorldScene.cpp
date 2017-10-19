@@ -27,14 +27,14 @@ bool HelloWorld::init()
 	this->addChild(tableView1);
 	tableView1->reloadData();
 
-	TableView* tableView2 = TableView::create(this, Size(60, 250));
+	/*TableView* tableView2 = TableView::create(this, Size(60, 250));
 	tableView2->setDirection(ScrollView::Direction::VERTICAL);
 	tableView2->setPosition(Vec2(330, 40));
 	tableView2->setDelegate(this);
 	tableView2->setTag(200);
 	tableView2->setVerticalFillOrder(TableView::VerticalFillOrder::TOP_DOWN);
 	this->addChild(tableView2);
-	tableView2->reloadData();
+	tableView2->reloadData();*/
 
     return true;
 }
@@ -54,7 +54,7 @@ Size HelloWorld::tableCellSizeForIndex(TableView* table, ssize_t idx) {
 
 TableViewCell* HelloWorld::tableCellAtIndex(TableView* table, ssize_t idx) {
 	auto string = String::createWithFormat("%ld", idx);
-
+	log("%s", string->getCString());
 	TableViewCell* cell = table->dequeueCell();
 
 	if (!cell) {
@@ -66,7 +66,7 @@ TableViewCell* HelloWorld::tableCellAtIndex(TableView* table, ssize_t idx) {
 		sprite->setPosition(Vec2(0, 0));
 		cell->addChild(sprite);
 
-		auto label = LabelTTF::create(string->getCString(), "Helvetica", 20.0);
+		auto label = LabelTTF::create("", "Helvetica", 20.0);
 		label->setPosition(Vec2::ZERO);
 		label->setAnchorPoint(Vec2::ZERO);
 		label->setTag(123);

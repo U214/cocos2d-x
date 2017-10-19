@@ -121,10 +121,10 @@ void HelloWorld::saveImage(Ref* sender) {
 
 	m_pTarget->saveToFile(png, Image::Format::PNG, true, nullptr);
 
-	auto image = m_pTarget->newImage();
+	/*auto image = m_pTarget->newImage();
 	auto tex = Director::getInstance()->getTextureCache()->addImage(image, png);
 
-	CC_SAFE_DELETE(image);
+	CC_SAFE_DELETE(image);*/
 
 	//auto sprite = Sprite::createWithTexture(tex);
 
@@ -134,9 +134,9 @@ void HelloWorld::saveImage(Ref* sender) {
 
 	//addChild(sprite);
 
-	Director::getInstance()->getRenderer()->render();
-	std::string fullpath = FileUtils::getInstance()->getWritablePath() + png;
-	log("Image saved %s", fullpath.c_str());
+	//Director::getInstance()->getRenderer()->render();
+	//std::string fullpath = FileUtils::getInstance()->getWritablePath() + png;
+	//log("Image saved %s", fullpath.c_str());
 
 	counter++;
 }
